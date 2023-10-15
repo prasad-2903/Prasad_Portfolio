@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porfolio</title>
+    <link rel="stylesheet" href="port.css">
+    <script src="https://kit.fontawesome.com/8686a6e51d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo1.jpeg" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Frontend Developer</p>
+                <h1>Hi, I'm <span>Prasad</span><br>Pawar From Maharashtra</h1>
+            </div>
+         </div>
+    </div>
+    <!--------------About------------------>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="prasad2.jpeg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title" >About Me</h1>
+                    <p> I'm 3rd year IT Engineering student Pursuing degree at VPKBIET Baramati. 
+                        <br>Enthusiastic about learning new skills, Believe in Hard Work and Truly dedicated.
+                       <br> Learning new programming languages and work on real time projects.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">skills</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="table-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Frontend developer</span><br>HTML,CSS,JS</li>
+                            <li><span>UI/UX</span><br>App Interface</li>
+                            <li><span>Web developer</span><br>website development</li>
+                        </ul>
+                    </div>
+                
+                    <div class="table-contents" id="Experience">
+                        <ul>
+                            <li>Currently pursuing Btech degree<br>Information Technology<br> Now No any Experience</li>
+                            
+                        </ul>
+                    </div>
+                    <div class="table-contents" id="Education">
+                        <ul>
+                            <li><span>2019</span><br>10th from SCVM Tarale,Satara</li>
+                            <li><span>2021</span><br>12th from YCIS,Satara</li>
+                            <li><span>2021-25</span><br>pursuing BTECH Degree(IT) from VPKBIET,Baramati</li>
+                        </ul>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+<!----------------------Projects----------------------------->
+<div id="projects">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="project-list">
+            <div>
+                <i class="fa-solid fa-temperature-low"></i>
+                <h2>Temperature Converter</h2>
+                <p>I have created simple temperature converter website using HTML,CSS & JS</p>
+                <a href="https://github.com/prasad-2903/temperature_converter.git" target="_blank">Github Link</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-calculator"></i>
+                <h2>Calculator</h2>
+                <p>I have created simple mobile app calculator website using HTML,CSS & JS</p>
+                <a href="https://github.com/prasad-2903/Calculator.git"  target="_blank">Github Link</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-store"></i>
+                <h2>Landing Page</h2>
+                <p>I have created simple coffee cafe landing page using HTML,CSS & JS.It is my first project</p>
+                <a href="https://github.com/prasad-2903/Starbuks_landing_page.git"  target="_blank">Github Link</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-------------Contact Me------------------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i>prasadpawar292003@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i>9637520010</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-telegram"></i></a>
+                </div>
+                <a href="C:\Users\sambh\Desktop\portfolio\my-cv.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="text" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>@Prasad <i class="fa-solid fa-heart"></i>  "Turning code into dreams,one line at a time."</p>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("table-contents");
+
+function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+
+}
+</script>
+
+</body>
+</html>
